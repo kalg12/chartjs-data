@@ -1,6 +1,6 @@
 /* Vamos a crear una bd local que nos diga los gustos de las personas en alimentos */
 
-export const data = [
+const data = [
   {
     id: 1,
     nombre: "Alejandro Marquez",
