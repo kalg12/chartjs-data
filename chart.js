@@ -1,3 +1,10 @@
+//Aquí vamos a importar la data de nuestra API
+import { getCoins } from "./src/API/api";
+
+const dataAPI = await getCoins();
+
+//Proxima clase clase vamos a traer la data en nuestra gráfica
+
 export const ctx = document.getElementById("myChart");
 
 export const miGrafica = () => {

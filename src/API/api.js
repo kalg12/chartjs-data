@@ -16,5 +16,3 @@ const getCoins = async () => {
     console.log("Error a la hora de consumir la API");
   }
 };
-
-getCoins();
