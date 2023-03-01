@@ -7,10 +7,6 @@ const getCoins = async () => {
     const getApi = await fetch(API);
     const data = await getApi.json();
     console.log(data); //Nos ayuda a ver en consola
-    //binance-usd
-    console.log(data[8].name);
-    //Hoy la moneda vale
-    console.log(data[8].current_price);
     return data;
   } catch (error) {
     console.log("Error a la hora de consumir la API");
@@ -18,6 +14,7 @@ const getCoins = async () => {
 };
 
 const dataAPI = getCoins();
+console.log(dataAPI);
 
 export const ctx = document.getElementById("myChart");
 
