@@ -1,9 +1,23 @@
-//Aquí vamos a importar la data de nuestra API
-import { getCoins } from "./src/API/api";
+const API =
+  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=mxn&order=market_cap_desc&per_page=100&page=1&sparkline=false";
 
-const dataAPI = await getCoins();
+/* Creamos función para consumir API */
+const getCoins = async () => {
+  try {
+    const getApi = await fetch(API);
+    const data = await getApi.json();
+    console.log(data); //Nos ayuda a ver en consola
+    //binance-usd
+    console.log(data[8].name);
+    //Hoy la moneda vale
+    console.log(data[8].current_price);
+    return data;
+  } catch (error) {
+    console.log("Error a la hora de consumir la API");
+  }
+};
 
-//Proxima clase clase vamos a traer la data en nuestra gráfica
+const dataAPI = getCoins();
 
 export const ctx = document.getElementById("myChart");
 
