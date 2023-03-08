@@ -6,10 +6,10 @@ export const miGrafica = async () => {
 
   /* Creamos función para consumir API */
   const getCoins = async () => {
+    /* A try catch block. */
     try {
       const getApi = await fetch(API);
       const data = await getApi.json();
-      console.log(data); //Nos ayuda a ver en consola
       return data;
     } catch (error) {
       console.log("Error a la hora de consumir la API");
@@ -17,7 +17,6 @@ export const miGrafica = async () => {
   };
 
   const dataAPI = await getCoins();
-  console.log(dataAPI);
 
   new Chart(ctx, {
     type: "bar",
@@ -25,7 +24,7 @@ export const miGrafica = async () => {
       labels: [dataAPI[2].id, dataAPI[3].id, dataAPI[4].id, dataAPI[5].id],
       datasets: [
         {
-          label: "Número de votos",
+          label: "Valor de la criptomoneda en $ MXN",
           data: [
             dataAPI[2].current_price,
             dataAPI[3].current_price,
@@ -46,4 +45,5 @@ export const miGrafica = async () => {
   });
 };
 
+/* Calling the function. */
 miGrafica();

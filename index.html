@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gráfica</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -25,15 +27,24 @@
         </div>
     </nav>
 
+    <!-- En esta sección colocaremos el propósito de nuestro trabajo -->
+    <section>
+        <h1 class="animate__animated animate__backInDown">Uso de Chart.js y el consumo de una API</h1>
+        <p>En este proyecto se hace uso de una API de Coingecko que toma como referencia el valor de las criptomonedas y
+            nos da el valor actual en pesos mexicanos (MXN)</p>
+    </section>
+
     <!-- Colocando chart js -->
-    <div>
+    <div class="chart-backgroundColor">
         <canvas id="myChart"></canvas>
     </div>
 
+    <footer>
+        <p>Hecho por <a href="https://www.facebook.com/kalg12"> Kevin Luciano</a></p>
+    </footer>
+
     <script type="module" src="./chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./main.js"></script>
-    <script src="./src/API/api.js"></script>
 </body>
 
 </html>

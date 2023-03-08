@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 20px;
+}
+
+.chart-backgroundColor {
+    background-color: #f5ddb3;
+}
+
+footer{
+    background-color: #fff;
+    height: 60px;
+    display: flex;
+    justify-content:center;
+}
+
+footer p {
+    color: red;
+    text-align: center;
+}
+
+footer a {
+    color: black;
+}
